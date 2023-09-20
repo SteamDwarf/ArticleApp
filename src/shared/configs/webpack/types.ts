@@ -9,7 +9,8 @@ export interface IWebpackPathes {
     entry: string,
     build: string,
     root: string,
-    html: string
+    html: string,
+    src: string
 }
 
 export interface IWebpackOptions {

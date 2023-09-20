@@ -1,8 +1,8 @@
 import { Link, Route, Routes } from 'react-router-dom';
-import styles  from './App.module.scss';
+import styles  from 'app/style.scss';
 import { Suspense } from 'react';
-import { AboutLazy } from './pages/About/AboutLazy';
-import { HomeLazy } from './pages/Home/HomeLazy';
+import { AboutPage } from 'pages/About';
+import { HomePage } from 'pages/Home';
 
 const App = () => {
     return (
@@ -11,8 +11,8 @@ const App = () => {
             <Link to="/about">About</Link>
             <Suspense fallback="Подождите...">
                 <Routes>
-                    <Route path='/' element={<HomeLazy />}/>
-                    <Route path='/about' element={<AboutLazy />}/>
+                    <Route path='/' element={<HomePage />}/>
+                    <Route path='/about' element={<AboutPage />}/>
                 </Routes>
             </Suspense>
         </div>

@@ -1,7 +1,7 @@
 import path from "path";
+import { webpackConfiguration } from "./src/shared/configs/webpack";
+import { IWebpackEnv } from "./src/shared/configs/webpack/types";
 //В tsconfig указать "module": "NodeNext" и "moduleResolution": "nodenext",
-import webpackConfiguration from "./configs/webpack/webpackConfiguration";
-import { IWebpackEnv } from "./configs/webpack/types";
 
 const config = (env: IWebpackEnv) => webpackConfiguration({
     mode: env.mode || "development",
@@ -10,7 +10,8 @@ const config = (env: IWebpackEnv) => webpackConfiguration({
         entry: path.resolve(__dirname, "src/index.tsx"),
         build: path.resolve(__dirname, "build"),
         root: path.resolve(__dirname),
-        html: path.resolve(__dirname, "src/index.html")
+        html: path.resolve(__dirname, "src/index.html"),
+        src: path.resolve(__dirname, "src")
     },
 })
 

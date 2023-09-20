@@ -8,7 +8,7 @@ const progressHandler = (precentage: number, message: string, ...args: any[]) =>
     console.info(`Info: ${args}`);
 }
 
-const webpackPlugins = (htmlPath: string):WebpackPluginInstance[] => {
+export const webpackPlugins = (htmlPath: string):WebpackPluginInstance[] => {
     return [
         //В html файл index.js подключится автоматически
         new HTMLWebpackPlugin({
@@ -21,5 +21,3 @@ const webpackPlugins = (htmlPath: string):WebpackPluginInstance[] => {
         })
     ]
 }
-
-export default webpackPlugins;

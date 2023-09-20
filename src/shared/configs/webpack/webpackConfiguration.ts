@@ -1,12 +1,12 @@
 import { Configuration } from "webpack";
 import { IWebpackOptions } from "./types";
-import webpackPlugins from "./webpackPlugins";
-import webpackResolveOptions from "./webpackResolveOptions";
-import webpackRules from "./webpackRules";
-import webpackDevServer from "./webpackDevServer";
+import { webpackPlugins } from "./webpackPlugins";
+import { webpackRules } from "./webpackRules";
+import { webpackDevServer } from "./webpackDevServer";
+import { webpackResolveOptions } from "./webpackResolveOptions";
 
 
-const webpackConfiguration = (options: IWebpackOptions):Configuration => {
+export const webpackConfiguration = (options: IWebpackOptions):Configuration => {
     const {mode, pathes, port} = options;
     const isDev = mode === "development";
 
@@ -25,9 +25,7 @@ const webpackConfiguration = (options: IWebpackOptions):Configuration => {
         devtool: isDev ? 'inline-source-map' : undefined,
         devServer: isDev ? webpackDevServer(port) : undefined,
         //При импорте файлов с указанным ниже расширением расширение не добавляется к пути
-        resolve: webpackResolveOptions()
+        resolve: webpackResolveOptions(options)
     }
     
 }
-
-export default webpackConfiguration;

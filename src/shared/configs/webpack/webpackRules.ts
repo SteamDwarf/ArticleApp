@@ -2,7 +2,7 @@ import { RuleSetRule } from "webpack";
 import { IWebpackOptions } from "./types";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-const webpackRules = (options: IWebpackOptions):RuleSetRule[] =>{
+export const webpackRules = (options: IWebpackOptions):RuleSetRule[] =>{
     const {mode} = options;
     const isDev = mode === "development";
 
@@ -37,5 +37,3 @@ const webpackRules = (options: IWebpackOptions):RuleSetRule[] =>{
         stylesRules
     ]
 }
-
-export default webpackRules;
