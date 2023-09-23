@@ -1,0 +1,32 @@
+@import "./_vars.scss";
+@import "../../shared/themes/_dark.scss";
+@import "../../shared/themes/_light.scss";
+
+@font-face {
+    font-family: 'Rounded';
+    src: url('assets/fonts/MPLUSRounded1c-Regular.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Rounded';
+    src: url('assets/fonts/MPLUSRounded1c-Bold.ttf');
+    font-weight: bold;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    background: var(--background);
+    font-family: "Rounded", sans-serif;
+}
+
+h3 {
+    font-size: var(--h3-size);
+    color: var(--fontColor);
+}

@@ -1,20 +1,24 @@
-import { Link, Route, Routes } from 'react-router-dom';
-import styles  from 'app/style.scss';
-import { Suspense } from 'react';
-import { AboutPage } from 'pages/About';
-import { HomePage } from 'pages/Home';
+import { Link } from 'react-router-dom';
+import { classNames } from 'shared/lib/classNames';
+import { useTheme } from './providers/themes';
+import { Header } from 'widgets/Header/Header';
+import './styles/style.scss';
+import styles from './App.module.scss';
+import { Sidebar } from 'widgets/Sidebar';
 
 const App = () => {
+    const {theme} = useTheme();
+
     return (
-        <div className='app'>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Suspense fallback="Подождите...">
-                <Routes>
-                    <Route path='/' element={<HomePage />}/>
-                    <Route path='/about' element={<AboutPage />}/>
-                </Routes>
-            </Suspense>
+        <div className={classNames('app', theme)}>
+            <Header />
+            {/* <AppRouting /> */}
+            <div className={styles.main}>
+                <Sidebar />
+                <div>
+                    
+                </div>
+            </div>
         </div>
             
     );

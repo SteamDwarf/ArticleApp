@@ -1,0 +1,6 @@
+.iconWrapper svg linearGradient stop:first-of-type {
+    stop-color: var(--first-icon-color);
+}
+.iconWrapper svg linearGradient stop:first-of-type + stop {
+    stop-color: var(--second-icon-color);
+}

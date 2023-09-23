@@ -1,0 +1,7 @@
+.button {
+    width: calc(var(--small-icon-size) + 8px);
+    padding: 4px;
+    border: 2px solid var(--first-icon-color);
+    border-radius: 50%;
+    background: var(--background);
+}

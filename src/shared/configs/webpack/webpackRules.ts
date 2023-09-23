@@ -6,6 +6,16 @@ export const webpackRules = (options: IWebpackOptions):RuleSetRule[] =>{
     const {mode} = options;
     const isDev = mode === "development";
 
+    const fontRules = {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+    }
+
+    const svgRules = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    }
+
     const typescriptRules = {
         test: /\.tsx?$/,
         use: "ts-loader",
@@ -15,9 +25,7 @@ export const webpackRules = (options: IWebpackOptions):RuleSetRule[] =>{
     const stylesRules = {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
           isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
           {
             loader: "css-loader",
             options: {
@@ -27,13 +35,14 @@ export const webpackRules = (options: IWebpackOptions):RuleSetRule[] =>{
                 }
             }
           },
-          // Compiles Sass to CSS
           "sass-loader",
         ],
     }
 
     return [
         typescriptRules,
-        stylesRules
+        stylesRules,
+        svgRules, 
+        fontRules
     ]
 }

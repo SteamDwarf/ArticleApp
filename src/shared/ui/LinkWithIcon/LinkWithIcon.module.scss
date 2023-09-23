@@ -1,0 +1,14 @@
+.link {
+    display: flex;
+    column-gap: 16px;
+    font-family: 'Rounded', sans-serif;
+    font-size: var(--h4-size);
+    font-weight: bold;
+    color: var(--fontColor);
+    text-decoration: none;
+}
+
+.icon {
+    display: inline-block;
+    width: var(--small-icon-size);
+}
