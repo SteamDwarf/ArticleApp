@@ -18,7 +18,7 @@ export const webpackConfiguration = (options: IWebpackOptions):Configuration => 
             filename: "[name].[contenthash].js",
             clean: true
         },
-        plugins: webpackPlugins(pathes.html),
+        plugins: webpackPlugins(options),
         module: {
             rules: webpackRules(options)
         },

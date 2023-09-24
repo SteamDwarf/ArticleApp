@@ -8,6 +8,7 @@ import { IconWrapper } from 'shared/ui/IconWrapper';
 import { ProfileWidget } from 'widgets/ProfileWidget';
 import Logo from 'assets/icons/Logo.svg';
 import { RoutesPathes } from 'shared/configs/routing';
+import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
 
 //TODO сделать ProfileWidget
 export const Header:FC<IComponentProps> = ({className}) => {
@@ -21,6 +22,7 @@ export const Header:FC<IComponentProps> = ({className}) => {
                 </AppLink>
             </div>
             <div className={styles.leftActions}>
+                <LanguageSwitcher />
                 <ThemeSwitchButton />
                 <ProfileWidget />
             </div>

@@ -17,6 +17,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Rounded", sans-serif;
 }
 
 .app {
@@ -26,7 +27,14 @@
     font-family: "Rounded", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--fontColor);
+}
+
 h3 {
     font-size: var(--h3-size);
-    color: var(--fontColor);
+}
+
+h2 {
+    font-size: var(--h2-size);
 }
