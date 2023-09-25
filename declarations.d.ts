@@ -1,14 +1,15 @@
 declare module '*.scss' {
-    const content: { [className: string]: string };
-    export default content;
+	const content: Record<string, string>;
+	export default content;
 }
-declare module "*.svg" {
-    import React from "react";
-    const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
-    export default SVG;
+declare module '*.svg' {
+	import type React from 'react';
+
+	const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
+	export default SVG;
 }
 
-declare const __IS_DEV__: boolean;
+declare const IS_DEV: boolean;
 
 /* declare module "react-refresh-webpack-plugin" {
     import webpack from 'webpack'

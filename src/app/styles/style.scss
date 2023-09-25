@@ -1,14 +1,15 @@
-@import "./_vars.scss";
-@import "../../shared/themes/_dark.scss";
-@import "../../shared/themes/_light.scss";
+@import "./vars";
+@import "../../shared/themes/dark";
+@import "../../shared/themes/light";
 
 @font-face {
-    font-family: 'Rounded';
+    font-family: Rounded;
     src: url('assets/fonts/MPLUSRounded1c-Regular.ttf');
     font-weight: normal;
 }
+
 @font-face {
-    font-family: 'Rounded';
+    font-family: Rounded;
     src: url('assets/fonts/MPLUSRounded1c-Bold.ttf');
     font-weight: bold;
 }
@@ -17,18 +18,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Rounded", sans-serif;
+    font-family: Rounded, sans-serif;
 }
 
 .app {
     width: 100%;
     height: 100vh;
     background: var(--background);
-    font-family: "Rounded", sans-serif;
+    font-family: Rounded, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--fontColor);
+    color: var(--font-color);
 }
 
 h3 {

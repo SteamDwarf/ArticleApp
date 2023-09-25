@@ -1,13 +1,13 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
 export interface ISidebarContext {
-    isFull: boolean,
-    setIsFull: (state: boolean) => void
+	isFull: boolean
+	setIsFull: (state: boolean) => void
 }
 
-const defaultValue:ISidebarContext = {
-    isFull: true,
-    setIsFull: (state: boolean) => null
-}
+const defaultValue: ISidebarContext = {
+	isFull: true,
+	setIsFull: (_) => null,
+};
 
 export const SidebarContext = createContext<ISidebarContext>(defaultValue);

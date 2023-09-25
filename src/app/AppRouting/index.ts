@@ -1,1 +1,1 @@
-export {AppRouting} from './ui/AppRouting';
+export { AppRouting } from './ui/AppRouting';

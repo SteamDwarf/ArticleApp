@@ -1,1 +1,1 @@
-export {ThemeSwitchButton} from './ThemeSwitchButton';
+export { ThemeSwitchButton } from './ThemeSwitchButton';

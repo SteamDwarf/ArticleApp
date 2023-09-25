@@ -1,12 +1,12 @@
-import { useContext } from "react";
-import { ISidebarContext, SidebarContext } from "../context/SidebarContext";
+import { useContext } from 'react';
+import { type ISidebarContext, SidebarContext } from '../context/SidebarContext';
 
 export const useSidebarToggle = () => {
-    const {isFull, setIsFull} = useContext<ISidebarContext>(SidebarContext);
+	const { isFull, setIsFull } = useContext<ISidebarContext>(SidebarContext);
 
-    const toggleSidebar = () => {
-        setIsFull(!isFull);
-    }
+	const toggleSidebar = () => {
+		setIsFull(!isFull);
+	};
 
-    return {isFull, toggleSidebar}
-}
+	return { isFull, toggleSidebar };
+};

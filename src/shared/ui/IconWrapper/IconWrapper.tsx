@@ -1,10 +1,10 @@
-import { FC, PropsWithChildren } from 'react';
-import styles from './IconWrapper.module.scss';
-import { IComponentProps } from '../types/interfaces';
+import { type FC } from 'react';
 import { classNames } from 'shared/lib/classNames';
+import styles from './IconWrapper.module.scss';
+import { type IComponentProps } from '../types/interfaces';
 
-export const IconWrapper:FC<IComponentProps> = ({children, className}) => {
-    return (
-        <span className={classNames(className, styles.iconWrapper)}>{children}</span>
-    )
-}
+export const IconWrapper: FC<IComponentProps> = ({ children, className }) => {
+	return (
+		<span className={classNames(className, styles.iconWrapper)}>{children}</span>
+	);
+};

@@ -1,7 +1,11 @@
+import { useTranslation } from 'react-i18next';
+
 const About = () => {
-    return (
-        <div>About</div>
-    );
-}
+	const { t } = useTranslation('sidebar');
+
+	return (
+		<div>{t('About')}</div>
+	);
+};
 
 export default About;

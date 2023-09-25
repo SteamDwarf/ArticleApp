@@ -1,2 +1,2 @@
-export {SidebarProvider} from './context/SidebarProvider';
-export {useSidebarToggle} from './hooks/useSidebarToggle';
+export { SidebarProvider } from './context/SidebarProvider';
+export { useSidebarToggle } from './hooks/useSidebarToggle';

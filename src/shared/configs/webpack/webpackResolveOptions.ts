@@ -1,11 +1,11 @@
-import { ResolveOptions } from "webpack";
-import { IWebpackOptions } from "./types";
+import { type ResolveOptions } from 'webpack';
+import { type IWebpackOptions } from './types';
 
-export const webpackResolveOptions = ({pathes}: IWebpackOptions): ResolveOptions => {
-    return {
-        extensions: [".tsx", ".ts", ".js"],
-        preferAbsolute: true,
-        modules: [pathes.src, "node_modules"],
-        alias: {}
-    }
-}
+export const webpackResolveOptions = ({ pathes }: IWebpackOptions): ResolveOptions => {
+	return {
+		extensions: ['.tsx', '.ts', '.js'],
+		preferAbsolute: true,
+		modules: [pathes.src, 'node_modules'],
+		alias: {},
+	};
+};

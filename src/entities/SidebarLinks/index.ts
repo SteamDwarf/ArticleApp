@@ -1,1 +1,1 @@
-export {mainSidebarLinksData} from './data/mainLinks';
+export { mainSidebarLinksData } from './data/mainLinks';
