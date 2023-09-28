@@ -40,6 +40,17 @@ export const webpackRules = (options: IWebpackOptions): RuleSetRule[] => {
 		],
 	};
 
+	const babelRules = {
+		test: /\.(js|jsx|tsx)$/,
+		exclude: /node_modules/,
+		use: {
+			loader: 'babel-loader',
+			options: {
+				presets: ['@babel/preset-env'],
+			},
+		},
+	};
+
 	return [
 		typescriptRules,
 		stylesRules,
