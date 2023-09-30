@@ -6,6 +6,7 @@ import App from 'app/App';
 import { ThemeProvider } from 'app/providers/themes';
 import { SidebarProvider } from 'app/providers/sidebar';
 import 'shared/configs/i18n/config';
+import { ErrorHandler } from 'app/providers/errorHandler/ErrorHandler';
 
 const rootContainer = document.querySelector('#root') as Element;
 const root = createRoot(rootContainer);
@@ -14,9 +15,9 @@ root.render(
 	<BrowserRouter>
 		<ThemeProvider>
 			<SidebarProvider>
-				<Suspense>
+				<ErrorHandler>
 					<App />
-				</Suspense>
+				</ErrorHandler>
 			</SidebarProvider>
 		</ThemeProvider>
 	</BrowserRouter>

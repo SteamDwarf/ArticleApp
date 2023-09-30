@@ -7,7 +7,7 @@ import styles from './AppLink.module.scss';
 
 export const AppLink: FC<LinkProps> = ({ className, children, ...other }) => {
 	return (
-		<Link className={classNames(styles.appLink, className)} {...other}>
+		<Link className={classNames(styles.link, className)} {...other}>
 			{children}
 		</Link>
 	);

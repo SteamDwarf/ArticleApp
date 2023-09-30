@@ -9,8 +9,8 @@
     "build:prod": "npx webpack --env mode=production",
     "eslint": "eslint \"**/*.{ts,tsx}\"",
     "eslint:fix": "eslint \"**/*.{ts,tsx}\" --fix",
-    "scss-lint": "npx stylelint \"**/*.scss\"",
-    "scss-lint:fix": "npx stylelint \"**/*.scss\" --fix",
+    "scsslint": "npx stylelint \"**/*.scss\"",
+    "scsslint:fix": "npx stylelint \"**/*.scss\" --fix",
     "test": "jest"
   },
   "author": "",

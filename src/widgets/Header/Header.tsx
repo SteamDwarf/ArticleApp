@@ -6,8 +6,8 @@ import { ThemeSwitchButton } from 'widgets/ThemeSwitchButton';
 import { IconWrapper } from 'shared/ui/IconWrapper';
 import { ProfileWidget } from 'widgets/ProfileWidget';
 import Logo from 'assets/icons/Logo.svg';
-import { RoutesPathes } from 'shared/configs/routing';
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
+import { RoutesPathes } from 'app/AppRouting/config/AppRouter.config';
 import styles from './Header.module.scss';
 
 // TODO сделать ProfileWidget
